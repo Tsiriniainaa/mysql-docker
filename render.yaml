@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: mysql-database
+    runtime: docker
+    plan: free
+    disk:
+      name: mysql-data
+      mountPath: /var/lib/mysql
+      sizeGB: 2
+    envVars:
+      - key: MYSQL_ROOT_PASSWORD
+        value: root123
+      - key: MYSQL_DATABASE
+        value: natiora_radio
